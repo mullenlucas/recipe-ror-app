@@ -1,16 +1,44 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RecipeRorApp</title>
+    <title>Candent Recipes</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
+    <nav class="nav">
+      <h1>Candent Recipes</h1>
+      <ul class="nav_links">
+        <li>
+          <%= link_to root_path do %>
+          Home
+          <% end %>
+        </li>
+        <li>
+          <%= link_to foods_path do %>
+          Food
+          <% end %>
+        </li>
+        <li>
+          <%= link_to recipes_path do %>
+          Recipes
+          <% end %>
+        </li>
+      </ul>
+    </nav>
+    
+    <br>
+    
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <%= turbo_frame_tag "modal" %>
     <%= yield %>
+    <%if user_signed_in? %>
+      <%= button_to "Sign Out", destroy_user_session_path, method: :delete %>
+    <% end %>
   </body>
 </html>
