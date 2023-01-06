@@ -1,2 +1,14 @@
-<div id="<%= dom_id recipe %>">
+<div id="<%= dom_id recipe %>" class="recipe">
+  <div >
+    <h3>
+      <strong>Recipe #<%= recipe.id %></strong>
+    </h3>
+    <p>
+    <strong><%= recipe.name %></strong>
+    </p>
+  </div>
+
+  <p>
+    <%= truncate(recipe.description, length: 150) %>
+  </p>
 </div>
