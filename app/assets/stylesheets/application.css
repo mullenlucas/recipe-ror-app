@@ -15,6 +15,7 @@
   display: flex;
   align-items: center;
 }
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -38,7 +39,6 @@
   display: flex;
   justify-content: flex-end;
   width: 80vw;
-  
 }
 
 #newrecipe > * {
