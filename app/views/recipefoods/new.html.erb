@@ -1,9 +1,19 @@
-<h1>New recipefood</h1>
+<%= form_with model: [@recipe, @recipe.recipefoods.create] do |form|%>
 
-<%= render "form", recipefood: @recipefood %>
+<div class="rfood-input-container">
+  <%= form.label :food %>
+  <%= form.select :food_id, Food.all.collect {|food| [food.name, food.id]},{
+  include_blank: true} , class:"form-select" %>
+</div>
 
-<br>
+<div class="rfood-input-container-add">
+  <%= form.label :quantity %>
+  <%= form.number_field :quantity , class:"form-control-add" , required: true,
+  placeholder: '1', min: 1%>
+</div>
 
-<div>
-  <%= link_to "Back to recipefoods", recipefoods_path %>
+<div class="rfood-input-container"><%= form.submit "Add", class:"btn" %></div>
+<%end%>
+<div class="rfood-input-container-bootoAdd">
+  <%=link_to 'Go to previous pages...', recipe_path(@recipe.id), class:"btn"%>
 </div>
