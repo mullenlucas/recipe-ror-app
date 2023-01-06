@@ -1,7 +1,7 @@
 <div>
-    <h2 class="section-title">Shopping List</h2>
-	<div class="shoppinglistitems">
-		<h4 class="itemsInfo">Amount of food items to buy: <%= @recipefoods.count %> </h4>
+  <h2 class="section-title">Shopping List</h2>
+  <div class="shopping-list-items">
+		<h4 class="items-info">Amount of food items to buy: <%= @recipefoods.count %> </h4>
 		<h4>Total price of food needed: $: <%= @total %></h4>
 	</div>
 </div>
@@ -15,13 +15,13 @@
     </tr>
   </thead>
 
-    <tbody>
-      <% @recipefoods.each do |sp_food| %>
-        <tr>
-          <td><%= sp_food.food.name %></td>
-          <td><%= sp_food.quantity %><%= sp_food.food.measurement_unit %></td>
-          <td><span>$<%= sp_food.food.price * sp_food.quantity.to_i%></span></td>
-      <% end %>
-    </tbody>
+  <tbody>
+    <% @recipefoods.each do |sp_food| %>
+      <tr>
+        <td><%= sp_food.food.name %></td>
+        <td><%= sp_food.quantity %><%= sp_food.food.measurement_unit %></td>
+        <td><span>$<%= sp_food.food.price * sp_food.quantity.to_i%></span></td>
+    <% end %>
+  </tbody>
 
 </table>
