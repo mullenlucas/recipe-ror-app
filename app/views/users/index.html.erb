@@ -3,5 +3,15 @@
 <h1>Users</h1>
 
 <div id="users">
+ recipe-fanctionalty
+  <% @users.each do |user| %>
+    <%= render user %>
+    <p>
+      <%= link_to "Show this user", user %>
+    </p>
+    <hr>
+  <% end %>
+</div>
   <%= render current_user %>
 </div>
+dev
