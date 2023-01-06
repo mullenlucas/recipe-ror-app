@@ -59,7 +59,7 @@ class UsersController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_user
-   if params[:id] == 'sign_out'
+    if params[:id] == 'sign_out'
       sign_out current_user
       redirect_to root_path
     else
