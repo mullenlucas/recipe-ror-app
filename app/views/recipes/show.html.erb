@@ -35,23 +35,57 @@
       <p class="r-sub-text"><%= @recipe.description %></p>
     </div>
 
-  </div>
-  
-<div class ="edith-button">
-  <button class="back1"><%= link_to "Edit this recipe", edit_recipe_path(@recipe) %></button>
-  <br>
-  <button class="back1"><%= link_to "Back to recipes", recipes_path %></button>
-<br>
-  <%= button_to "Destroy this recipe", @recipe, method: :delete %>
-</div>
-
-  <div class="r-button-generators">
-
-      <button class="back1"><%= link_to "Generate shopping list", recipe_shopping_lists_path(@recipe) %></button>
-
+    <div class="edith-button">
+      <button class="back1"><%= link_to "Edit this recipe", edit_recipe_path(@recipe) %></button>
+      <br>
+      <button class="back1"><%= link_to "Back to recipes", recipes_path %></button>
+      <br>
       <button class="back1">
-      <%= link_to new_recipe_recipefood_path(@recipe), :class => "Add ingredients" do %>Add Ingredients<% end %>
+      <%= link_to "Destroy this recipe", @recipe, method: :delete %>
       </button>
+    </div>
+  </div>
+
+  <div class="edith-button">
+
+    <button class="back1">
+    <%= link_to "Generate shopping list", recipe_shopping_lists_path(@recipe) %>
+    </button>
+
+    <button class="back1">
+    <%= link_to new_recipe_recipefood_path(@recipe) do %>Add Ingredients<% end %>
+    </button>
       
   </div>
+
+    <table class="recipe-items-table">
+    <thead>
+      <tr>
+        <th>Food</th>
+        <th>Quantity</th>
+        <th>Value</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    
+    <tbody>
+      <% @recipefoods.each do |rfood|%> 
+
+      <tr>
+        <td><%= rfood.food.name%></th>
+        <td><%= rfood.quantity%><%= rfood.food.measurement_unit  %></td>
+        <td>$<%= rfood.quantity.to_i * rfood.food.price %></td>
+          
+          <td class="ingredients-btn">
+            <%=button_to "Delete", recipe_recipefood_path(recipe_id: @recipe.id, id: rfood.id), method: :delete, class:"back1"%>
+            <%=button_to "Modify", edit_recipe_recipefood_path(recipe_id: @recipe.id, id:rfood.id), class:"back1"%>
+          </td>
+        
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+
+
 
