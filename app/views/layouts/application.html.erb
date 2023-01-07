@@ -10,35 +10,28 @@
   </head>
 
   <body>
-    <nav class="nav">
-      <h1>Candent Recipes</h1>
-      <ul class="nav_links">
-        <li>
-          <%= link_to root_path do %>
-          Home
-          <% end %>
-        </li>
-        <li>
-          <%= link_to foods_path do %>
-          Food
-          <% end %>
-        </li>
-        <li>
-          <%= link_to recipes_path do %>
-          Recipes
-          <% end %>
-        </li>
+  <header>
+      <div>
+        <h1>Candent Recipes</h1>
+      </div>
+      <ul id="linkList">
+      <li><%= link_to 'Users index' , users_path %></li>
+      <li><%= link_to 'My Recipes' , root_path %></li>
+      <li><%= link_to 'My Foods' , foods_path %></li>
+      <li><%= link_to 'public recips' , public_recipes_path %></li>
       </ul>
-    </nav>
-    
-    <br>
-    
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= turbo_frame_tag "modal" %>
+      <ul id="account-edith">
+        <% if user_signed_in? %>
+        <h3><%= "Hello! #{current_user.name}" %></h3>
+        <li><%= link_to 'Sign out' ,destroy_user_session_path, method: :delete %></li>
+        <li><%= link_to 'Edit Profile', edit_user_registration_path %></li>
+        <% else %>
+        <li><%= link_to 'Sign in', new_user_session_path %></li>
+        <li><%= link_to 'Sign up', new_user_registration_path %></li>
+        <% end %>
+      </ul>
+    </header>
+    <div id="pageBody">
     <%= yield %>
-    <%if user_signed_in? %>
-      <%= button_to "Sign Out", destroy_user_session_path, method: :delete %>
-    <% end %>
-  </body>
+    </div>
 </html>
