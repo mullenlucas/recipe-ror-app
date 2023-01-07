@@ -1,12 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
-
   <h3><b>Candent Recipe App</b></h3>
-
 </div>
 
 # 📗 Table of Contents
