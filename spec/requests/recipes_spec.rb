@@ -4,7 +4,7 @@ RSpec.describe 'PublicRecipe', type: :feature do
   describe 'index page' do
     before :each do
       @nice_recipe = Recipe.create(name: 'Nice recipe', preparation_time: '1,5 hours', cooking_time: '40',
-                                    description: 'Tasty dustwich', public: true)
+                                   description: 'Tasty dustwich', public: true)
     end
 
     feature 'Testing post index page' do
