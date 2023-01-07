@@ -12,10 +12,6 @@ header {
   align-items: center;
 }
 
-.back1 a:visited {
-  color: white;
-}
-
 .back a {
   text-decoration: none;
 }
@@ -28,6 +24,10 @@ header {
 
 .addFoods button a {
   text-decoration: none;
+}
+
+.back1 a:visited {
+  color: white;
 }
 
 .recipes-list li {
