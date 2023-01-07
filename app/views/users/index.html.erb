@@ -6,7 +6,11 @@
   <% @users.each do |user| %>
     <%= render user %>
     <p>
-      <button><%= link_to "Show this user", user %></button>
+      <%= link_to "Show this user", user %>
     </p>
     <hr>
   <% end %>
+</div>
+  <%= render current_user %>
+</div>
+dev
