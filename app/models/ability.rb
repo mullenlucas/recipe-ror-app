@@ -7,7 +7,7 @@ class Ability
     can :read, Recipe, user
     can :manage, Recipe, user
     can :manage, Food, user
-    can :manage, RecipeFood, user
+    can :manage, Recipefood, user
     return unless user.role == 'admin'
 
     can :manage, :all

@@ -45,3 +45,13 @@
   <%= button_to "Destroy this recipe", @recipe, method: :delete %>
 </div>
 
+  <div class="r-button-generators">
+
+      <button class="back1"><%= link_to "Generate shopping list", recipe_shopping_lists_path(@recipe) %></button>
+
+      <button class="back1">
+      <%= link_to new_recipe_recipefood_path(@recipe), :class => "Add ingredients" do %>Add Ingredients<% end %>
+      </button>
+      
+  </div>
+
