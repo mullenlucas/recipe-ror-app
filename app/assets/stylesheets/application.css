@@ -12,6 +12,10 @@ header {
   align-items: center;
 }
 
+.back1 a:visited {
+  color: white;
+}
+
 .back a {
   text-decoration: none;
 }
@@ -178,10 +182,6 @@ header {
   text-decoration: none;
   box-shadow: 3px 3px #888;
   margin-bottom: 12px;
-  color: white;
-}
-
-.back1 a:visited {
   color: white;
 }
 
