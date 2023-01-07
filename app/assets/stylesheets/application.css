@@ -1,31 +1,46 @@
 /* navbar */
- #pageBody {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 header {
   display: flex;
   align-items: center;
   justify-content: space-around;
   background-color: rgb(225, 225, 225);
 }
+
 #pageBody {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.back a {
+  text-decoration: none;
+}
+
+.edith-button a {
+  text-decoration: none;
+  color: green;
+  font-size: 15px;
+}
+
+.addFoods button a {
+  text-decoration: none;
+}
+
+.recipes-list li {
+  list-style: none;
+}
+
 #linkList {
   display: flex;
 }
+
 #linkList a {
   display: flex;
   text-decoration: none;
-  font: 40px;
-  color:green;
+  font-size: 20px;
+  color: green;
 }
+
 #linkList li {
   list-style: none;
 }
@@ -37,11 +52,12 @@ header {
 #account-edith {
   display: flex;
 }
+
 #account-edith a {
   display: flex;
   text-decoration: none;
-  font: 40px;
 }
+
 #account-edith li {
   list-style: none;
 }
@@ -50,7 +66,6 @@ header {
   margin: 1rem;
 }
 
-
 #users {
   border: #000 1px solid;
   width: 40vw;
@@ -58,15 +73,14 @@ header {
   justify-content: space-between;
   padding: 1rem;
   margin: 1rem;
-  width: 40vw;
 }
 
 #users a {
   text-decoration: none;
-  color:green;
+  color: green;
 }
 
-/*recipe*/
+/* recipe */
 .recipe-container {
   display: flex;
   justify-content: space-between;
@@ -75,7 +89,6 @@ header {
   margin: 1rem;
   width: 60vw;
   margin-left: 15vw;
-   
 }
 
 .recipe-header {
@@ -102,17 +115,9 @@ header {
   margin-left: 30vw;
 }
 
-
-.edith-button a {
-  text-decoration: none;
-  color: green;
-  font-size: 15px;
-}
-
 .back1 {
-margin-bottom: 4px;
+  margin-bottom: 4px;
 }
-
 
 #recipes a {
   text-decoration: none;
@@ -126,22 +131,18 @@ margin-bottom: 4px;
 .recipe div {
   display: flex;
   align-items: center;
- 
 }
+
 .back {
   border: #000 1px solid;
   width: 100px;
-  margin-bottom:3px;
+  margin-bottom: 3px;
   padding: 7px;
   margin-left: 30vw;
 }
 
-.back a {
-  text-decoration: none;
-}
-
 .form {
-  margin-left:30vw ;
+  margin-left: 30vw;
 }
 
 .form input {
@@ -153,7 +154,6 @@ margin-bottom: 4px;
   width: 30vw;
   padding: 30px;
 }
-
 
 #newrecipe {
   display: flex;
@@ -171,7 +171,7 @@ margin-bottom: 4px;
   margin-bottom: 30px;
 }
 
-/* public recipe*/
+/* public recipe */
 .section-title {
   text-align: center;
 }
@@ -180,32 +180,43 @@ margin-bottom: 4px;
   display: flex;
   border: 2px solid #000;
   border-radius: 5px;
-  width: 50vw;
-  margin-inline: 30vw;
-}
-
-.recipes-list li {
-  list-style: none;
+  width: 60vw;
+  align-items: center;
 }
 
 .recipe-card-header {
-  width: 50%;
+  width: 60%;
+  align-content: center;
+  color: green;
+}
+
+.recipe-card {
+  width: 60%;
+  border-right: #000 1px solid;
+  align-content: center;
+  margin-left: 1rem;
 }
 
 .recipe-card-header h4 {
-  margin: 0;
+  margin: 10px;
 }
 
-
+.recipe-card-info {
+  margin-left: 1rem;
+}
 
 /* shopping list */
 
 /* food */
+.food-form {
+  margin-top: 5vw;
+}
+
 .addFoods {
   display: flex;
   flex-direction: column;
   width: 40vw;
-  margin-inline: 30vw;
+  margin-top: 5vw;
   padding-bottom: 30px;
 }
 
@@ -216,15 +227,12 @@ margin-bottom: 4px;
   background-color: rgb(115, 225, 115);
 }
 
-.addFoods button a {
-  text-decoration: none;
-}
-
 table,
 th,
 td {
   border: 1px solid;
   width: 40vw;
+  padding: 10px;
 }
 
 tr:nth-child(odd) {
@@ -235,20 +243,11 @@ th {
   background-color: rgb(198, 194, 194);
 }
 
-.r-button-generators {
-  display: flex;
-  width: 40vw;
-  margin-inline: 30vw;
-  justify-content: space-between;
-  padding: 10px 0;
-  border-bottom: 2px solid black;
-}
-
-
 .delete-input-food {
   display: flex;
   justify-content: center;
 }
+
 .food-unit,
 .custom-btn {
   margin: 5px 0;
@@ -260,13 +259,14 @@ th {
 }
 
 .food-form-cell input {
-width: 30vw;
-padding: 10px;
+  width: 30vw;
+  padding: 10px;
 }
 
 .submit {
   justify-content: center;
 }
-.submit-btn input{
+
+.submit-btn input {
   background-color: rgb(84, 190, 84);
 }
