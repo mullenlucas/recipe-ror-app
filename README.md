@@ -111,12 +111,12 @@ cd blog-app-ror
 
 ### Install
 
+- Ensure you have PostgreSQL installed before running the application `psql --version`
 - Run `bundle install`
+- Create a `.env` file in the project's root folder to assign variable values for the psql database (linked to the config/database.yml)
+- Run `rails db:create` and then `rails db:migrate`
 - Run `rails server`
 - Open Browser `http://localhost:3000/`
-- Ensure you have PostgreSQL installed before running the application `psql --version`
-- Run `rails db:create`.
-- Create a `.envs` file using the link to host postgres credentials.
 
 ### Usage
 
