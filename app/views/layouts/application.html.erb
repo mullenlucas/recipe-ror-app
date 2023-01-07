@@ -15,10 +15,10 @@
         <h1>Candent Recipes</h1>
       </div>
       <ul id="linkList">
-      <li><%= link_to 'Users index' , users_path %></li>
-      <li><%= link_to 'My Recipes' , root_path %></li>
-      <li><%= link_to 'My Foods' , foods_path %></li>
-      <li><%= link_to 'public recips' , public_recipes_path %></li>
+        <li><%= link_to 'Users' , users_path %></li>
+        <li><%= link_to 'Recipes' , root_path %></li>
+        <li><%= link_to 'Foods' , foods_path %></li>
+        <li><%= link_to 'Public Recipes' , public_recipes_path %></li>
       </ul>
       <ul id="account-edith">
         <% if user_signed_in? %>
